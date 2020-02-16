@@ -91,7 +91,7 @@ def solve_external_optics_matrix(solar_cell, options):
     position = options.position * 1e9
     # delta = (position[1] - position[0])
     delta = 1./np.diff(position)
-    delta = 1./np.gradient(position)
+    #delta = 1./np.gradient(position)
     absorption_power = absorbed_matrix[:,:] * delta
     output = {'position':   position, 
               'absorption': absorption_power,
